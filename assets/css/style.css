@@ -1,0 +1,102 @@
+/* ===== Estilos generales ===== */
+
+@font-face {
+  font-family: 'Minecraftia';
+  src: url('/assets/fonts/Minecraftia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  background: url('/assets/images/minecraft-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Minecraftia', sans-serif;
+  color: #000000;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Encabezado ===== */
+.header {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+h1 {
+  font-size: 80px;
+  color: #ffffff;
+  text-shadow: 3px 3px #003300, 0 0 20px #7b00ff;
+  animation: glow 2s infinite alternate;
+}
+
+h2 {
+  font-size: 30px;
+  color: #ffffff;
+  margin-top: -10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+p {
+  color: #e0e0e0;
+  font-size: 18px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* ===== Secciones y tarjetas ===== */
+.sections {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 4px solid #00ff00;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 6px 6px #003300;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ===== Botones estilo Minecraft ===== */
+.btn {
+  display: block;
+  background-color: #00ff00;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  box-shadow: 3px 3px #003300;
+  text-shadow: 1px 1px 2px #000;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #33ff33;
+  transform: scale(1.05);
+}
+
+/* ===== Animaciones ===== */
+@keyframes glow {
+  from { text-shadow: 0 0 10px #000000; }
+  to { text-shadow: 0 0 25px #000000; }
+}
