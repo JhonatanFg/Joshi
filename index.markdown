@@ -6,7 +6,7 @@ title: Joshi
 <div class="header">
   <h1>JOSHI</h1>
   <h2>¡Hola, soy Joshi!</h2>
-  <p>Desarrollador y entusiasta del mundo de Minecraft.</p>
+  <p>Desarrollador y jugador adicto a los cubos.</p>
 </div>
 
 <div class="sections">
