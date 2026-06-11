@@ -1,5 +1,4 @@
 /* ===== Estilos generales ===== */
-
 @font-face {
   font-family: 'Minecraftia';
   src: url('/Joshi/assets/fonts/Minecraftia.ttf') format('truetype');
@@ -7,44 +6,78 @@
   font-style: normal;
 }
 
-
 body {
-  background: url('/Joshi/assets/images/minecraft-bg.jpg') no-repeat center center fixed;
+  background: url('/Joshi/assets/images/minecraft-day-wide.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: 'Minecraftia', sans-serif;
-  color: #000000;
+  color: #ffffff;
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
-/* ===== Encabezado ===== */
-.header {
-  background-color: transparent;
+/* Modo noche automático */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: url('/Joshi/assets/images/minecraft-night-wide.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #e0e0e0;
+  }
 }
 
+/* ===== Encabezado ===== */
+.header {
+  position: relative; /* necesario para ubicar el botón dentro */
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(1px) saturate(110%);
+  -webkit-backdrop-filter: blur(1px) saturate(110%);
+  border-radius: 22px;
+  padding: 40px;
+  margin: 40px auto;
+  width: 70%;
+  box-shadow: inset 0 0 45px rgba(255,255,255,0.25), 0 0 30px rgba(0,0,0,0.25);
+}
 
 h1 {
-  font-size: 80px;
+  font-size: 64px;
+  font-weight: bold;
   color: #ffffff;
-  text-shadow: 3px 3px #003300, 0 0 20px #7b00ff;
-  animation: glow 2s infinite alternate;
+  text-shadow: 0 0 5px rgba(0,0,0,0.6);
 }
 
 h2 {
-  font-size: 30px;
-  color: #ffffff;
-  margin-top: -10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-size: 28px;
+  color: #f0f0f0;
+  margin-top: 10px;
 }
 
 p {
   color: #e0e0e0;
   font-size: 18px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* ===== Secciones y tarjetas ===== */
+/* ===== Botón Día/Noche dentro del cuadro Joshi ===== */
+#toggle-theme {
+  position: absolute; /* se posiciona dentro del header */
+  top: 15px;
+  right: 15px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border-radius: 14px;
+  padding: 6px 12px;
+  font-size: 18px;
+  box-shadow: inset 0 0 20px rgba(255,255,255,0.3), 0 0 15px rgba(0,0,0,0.25);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#toggle-theme:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: scale(1.05);
+}
+
+/* ===== Secciones generales ===== */
 .sections {
   display: flex;
   justify-content: center;
@@ -53,47 +86,68 @@ p {
   flex-wrap: wrap;
 }
 
-.card {
-  background-color: rgba(0, 0, 0, 0.6);
-  border: 4px solid #00ff00;
-  border-radius: 10px;
+/* ===== Tarjetas con efecto gota de agua ===== */
+.card,
+.proyectos,
+.quien-soy,
+.escribeme {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(1px) saturate(110%);
+  -webkit-backdrop-filter: blur(1px) saturate(110%);
+  border-radius: 24px;
   padding: 20px;
   width: 300px;
-  box-shadow: 6px 6px #003300;
-  transition: transform 0.3s ease;
+  box-shadow: inset 0 0 55px rgba(255,255,255,0.3), 0 0 35px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.card:hover,
+.proyectos:hover,
+.quien-soy:hover,
+.escribeme:hover {
   transform: scale(1.05);
+  box-shadow: inset 0 0 65px rgba(255,255,255,0.35), 0 0 45px rgba(0,0,0,0.4);
 }
 
-.card img {
+.card img,
+.proyectos img,
+.quien-soy img,
+.escribeme img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 18px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
 }
 
-/* ===== Botones estilo Minecraft ===== */
+/* ===== Botones estilo gota de agua ===== */
 .btn {
   display: block;
-  background-color: #00ff00;
-  color: #000;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  color: #ffffff;
   font-weight: bold;
   text-decoration: none;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  box-shadow: 3px 3px #003300;
-  text-shadow: 1px 1px 2px #000;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 16px;
+  box-shadow: inset 0 0 25px rgba(255,255,255,0.3), 0 0 20px rgba(0,0,0,0.25);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .btn:hover {
-  background-color: #33ff33;
+  background: rgba(255, 255, 255, 0.22);
   transform: scale(1.05);
 }
 
-/* ===== Animaciones ===== */
-@keyframes glow {
-  from { text-shadow: 0 0 10px #000000; }
-  to { text-shadow: 0 0 25px #000000; }
+/* ===== Pie de página ===== */
+footer {
+  margin-top: 60px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  color: #ccc;
+  font-size: 14px;
+  border-top: 2px solid rgba(255,255,255,0.2);
+  box-shadow: inset 0 0 30px rgba(255,255,255,0.25), 0 0 25px rgba(0,0,0,0.25);
 }
