@@ -3,14 +3,13 @@ layout: default
 title: Joshi
 ---
 
+<button id="toggle-theme" class="btn">🏞️/🌃</button>
+
 <div class="header">
   <h1>JOSHI</h1>
   <h2>¡Hola, soy Joshi!</h2>
   <p>Desarrollador y jugador adicto a los cubos.</p>
 </div>
-
-<button id="toggle-theme" class="btn">🏞️/🌃</button>
-
 
 <div class="sections">
   <div class="card">
