@@ -57,7 +57,7 @@ body {
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
   animation: wave 3s ease-in-out infinite;
-  z-index: 9999; /* asegura que esté por encima de todo */
+  z-index: 99999; /* asegura que esté por encima de todo */
 }
 
 #toggle-theme:hover {
@@ -188,3 +188,4 @@ footer {
     padding: 6px 10px;
   }
 }
+
