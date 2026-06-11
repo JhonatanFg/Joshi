@@ -42,11 +42,11 @@ body {
   100% { transform: translateY(0px); }
 }
 
-/* ===== Botón Día/Noche sobrepuesto ===== */
+/* ===== Botón Día/Noche flotante ===== */
 #toggle-theme {
-  position: fixed; /* flotante sobre todo */
-  top: 20px;
-  right: 20px;
+  position: fixed; /* flotante sobre todo el contenido */
+  top: 15px;
+  right: 15px;
   background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(3px);
@@ -57,7 +57,7 @@ body {
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
   animation: wave 3s ease-in-out infinite;
-  z-index: 999; /* siempre por encima */
+  z-index: 9999; /* asegura que esté por encima de todo */
 }
 
 #toggle-theme:hover {
@@ -178,4 +178,14 @@ footer {
   border-top: 2px solid rgba(255,255,255,0.2);
   box-shadow: inset 0 0 30px rgba(255,255,255,0.25), 0 0 25px rgba(0,0,0,0.25);
   animation: wave 6s ease-in-out infinite;
+}
+
+/* ===== Responsivo para móviles ===== */
+@media (max-width: 600px) {
+  #toggle-theme {
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    padding: 6px 10px;
+  }
 }
