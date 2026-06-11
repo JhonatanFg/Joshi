@@ -42,21 +42,27 @@ body {
   100% { transform: translateY(0px); }
 }
 
-/* ===== Botón Día/Noche dentro del cuadro Joshi ===== */
+/* ===== Botón Día/Noche sobrepuesto ===== */
 #toggle-theme {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
-  border-radius: 14px;
-  padding: 6px 12px;
-  font-size: 18px;
-  box-shadow: inset 0 0 20px rgba(255,255,255,0.3), 0 0 15px rgba(0,0,0,0.25);
+  position: fixed; /* flotante sobre todo */
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 16px;
+  padding: 8px 14px;
+  font-size: 20px;
+  box-shadow: inset 0 0 25px rgba(255,255,255,0.3), 0 0 20px rgba(0,0,0,0.25);
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
   animation: wave 3s ease-in-out infinite;
+  z-index: 999; /* siempre por encima */
+}
+
+#toggle-theme:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: scale(1.08);
 }
 
 /* ===== Encabezado ===== */
@@ -93,11 +99,6 @@ h2 {
 p {
   color: #e0e0e0;
   font-size: 18px;
-}
-
-#toggle-theme:hover {
-  background: rgba(255, 255, 255, 0.22);
-  transform: scale(1.05);
 }
 
 /* ===== Secciones generales ===== */
