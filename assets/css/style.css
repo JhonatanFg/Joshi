@@ -44,22 +44,26 @@ body {
 
 /* ===== Botón Día/Noche flotante ===== */
 #toggle-theme {
-  position: fixed; /* flotante independiente del header */
-  top: 25px; /* más cerca del cuadro Joshi */
-  right: 25px;
-  background: rgba(255, 255, 255, 0.10); /* menor desenfoque */
-  backdrop-filter: blur(1px); /* desenfoque reducido */
+  position: fixed;
+  top: 35px;   /* más cerca del cuadro Joshi */
+  right: 35px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(1px); /* mismo nivel de desenfoque que el cuadro */
   -webkit-backdrop-filter: blur(1px);
   border-radius: 16px;
-  border: none; /* elimina borde negro */
+  border: none;
   outline: none;
-  box-shadow: 0 0 12px rgba(255,255,255,0.25), 0 0 8px rgba(0,0,0,0.15); /* borde borroso */
   padding: 8px 14px;
   font-size: 20px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
   animation: wave 3s ease-in-out infinite;
-  z-index: 99999; /* asegura que esté por encima de todo */
+  z-index: 99999;
+
+  /* Borde negro más suave y menos borroso */
+  box-shadow:
+    0 0 8px rgba(0,0,0,0.3),   /* sombra externa más ligera */
+    inset 0 0 6px rgba(0,0,0,0.2); /* borde interno difuso */
 }
 
 #toggle-theme:hover {
@@ -184,8 +188,8 @@ footer {
 /* ===== Responsivo para móviles ===== */
 @media (max-width: 600px) {
   #toggle-theme {
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
     font-size: 16px;
     padding: 6px 10px;
   }
