@@ -9,7 +9,7 @@ title: Joshi
   <p>Desarrollador y jugador adicto a los cubos.</p>
 </div>
 
-<button id="toggle-theme" class="btn">Cambiar Modo Día/Noche</button>
+<button id="toggle-theme" class="btn">🏞️/🌃</button>
 
 
 <div class="sections">
