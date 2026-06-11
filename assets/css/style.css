@@ -15,7 +15,7 @@ body {
   margin: 0;
   padding: 0;
   transition: background 0.8s ease-in-out;
-  animation: wave 6s ease-in-out infinite;
+  animation: wave 6s ease-in-out infinite; /* efecto agua en todo el body */
 }
 
 /* Modo noche automático */
@@ -44,7 +44,7 @@ body {
 
 /* ===== Botón Día/Noche flotante ===== */
 #toggle-theme {
-  position: fixed; /* flotante independiente del header */
+  position: fixed; /* flotante sobre todo el contenido */
   top: 15px;
   right: 15px;
   background: rgba(255, 255, 255, 0.18);
@@ -57,7 +57,7 @@ body {
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
   animation: wave 3s ease-in-out infinite;
-  z-index: 9999; /* siempre por encima de todo */
+  z-index: 9999; /* asegura que esté por encima de todo */
 }
 
 #toggle-theme:hover {
@@ -80,7 +80,7 @@ body {
 }
 
 h1, h2, p {
-  animation: wave 5s ease-in-out infinite;
+  animation: wave 5s ease-in-out infinite; /* movimiento fluido en textos */
 }
 
 h1 {
@@ -141,7 +141,7 @@ p {
   width: 100%;
   border-radius: 18px;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
-  animation: wave 5s ease-in-out infinite;
+  animation: wave 5s ease-in-out infinite; /* movimiento fluido en imágenes */
 }
 
 /* ===== Botones estilo gota de agua ===== */
