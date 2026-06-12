@@ -56,14 +56,15 @@ body {
   animation: elastic 1s ease-out;
 }
 
-/* ===== Botón Día/Noche dentro del cuadro Joshi ===== */
+/* ===== Botón Día/Noche con borde negro borroso extendido y tenue ===== */
 #toggle-theme {
   position: absolute; /* dentro del header */
   top: 15px;
-  right: 15px;
-  background: rgba(255, 255, 255, 0.04); /* opacidad muy baja */
-  backdrop-filter: blur(1px);
-  -webkit-backdrop-filter: blur(1px);
+  left: 81%;          /* ajusta según tu preferencia */
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.03); /* muy transparente */
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   border-radius: 20px;
   border: none;
   outline: none;
@@ -72,17 +73,24 @@ body {
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
   animation: wave 3s ease-in-out infinite;
-  z-index: 10; /* suficiente para estar sobre los textos */
+  z-index: 20;
 
-  /* Borde negro muy suave */
+  /* Bordes negros borrosos extendidos pero suaves */
   box-shadow:
-    0 0 3px rgba(0,0,0,0.15),
-    inset 0 0 2px rgba(0,0,0,0.1);
+    0 0 30px rgba(0,0,0,0.15),   /* halo externo muy tenue y amplio */
+    0 0 50px rgba(0,0,0,0.1),    /* sombra externa más extendida y ligera */
+    inset 0 0 10px rgba(0,0,0,0.08), /* borde interno muy suave */
+    inset 0 0 6px rgba(0,0,0,0.05);  /* borde interno apenas visible */
 }
 
 #toggle-theme:hover {
   background: rgba(255, 255, 255, 0.08);
-  transform: scale(1.1);
+  transform: translateX(-50%) scale(1.1);
+  box-shadow:
+    0 0 35px rgba(0,0,0,0.18),
+    0 0 55px rgba(0,0,0,0.12),
+    inset 0 0 12px rgba(0,0,0,0.1),
+    inset 0 0 8px rgba(0,0,0,0.08);
 }
 
 /* ===== Encabezado textos ===== */
